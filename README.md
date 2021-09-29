@@ -1,2 +1,2 @@
-# phygital-pay
-Repository for Phygital Pay project code samples
+# phygital-pay-merchant-api
+Repository for Phygital Pay Merchant API project code samples.
