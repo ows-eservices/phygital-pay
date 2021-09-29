@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "54184ae3-c155-46b1-92a5-a8468a906888",
+		"name": "Phygital Pay Merchant API - 3PI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Generate Code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Shared-Key",
+						"value": "1111111111111111111111111111111111111111111111111111111111111111",
+						"type": "text"
+					},
+					{
+						"key": "Request-Signature",
+						"value": "jITTdo4rp/+tNPAlAhY3lrwi1JGfRHDKLDkGw6yilZEYbw0J9FW5FNFsHfpC3rPTIYr1xrMrpAVWYEBYCY5OGkypuDVS21K5uOt5RyS5ci5vYuTQG/EgzbXoMnqd7QRzEuwJ7pe8najCrTcCmApkfz9S8wOk9wXqDXqf+Om7sq1FCX2NMZCagGzDezArmpQe1ORcTVhy0dZpWI1n9gVKbzHPAa2ebsTyhoHISPpsezcIADIN64vbDkJ+VOYuK/t5UH3Dik3t7zNfTD2i69+pp4ECKwMojEcuJe9cMVo1/3xJoLNDhByMAyjTlSgJ8QilcGskQN56mdzTYsizgF/bxrYmIp4LWK6qV15ZHZCAm/UZvgpXNEkHwvBkwtzDtinT2lY5kC1oFxhafSJkvaDOKqMS23j0O//jDqxsh0Zxttwp3Mu5S5lTEMFCV5t9gsOppd4INtFlNiR3n7UpaG+i2KPbxuDecSQjwL4nbtlWmywIT2dvOiSJ3K9CLQw/tns0DrXWLO3INkFqXovT+Ff7LxqlTFzngOv0JVUALV0SQscZwngx542EENi2BrEAa8fm+R26pAeI3gsiTQl7KjWuf0NH5dMDATze6NxQjKQ/aeG/xfjOEDNNQqS1PjBZL6HdUxaiP8WDYmgMDrxxfEYuxpteH9io18jHrf4vEIKI3K0=",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 10.00,\n    \"codeFileType\": \"JPG\",\n    \"codeFormat\": \"QR\",\n    \"codeSize\": \"200x200\",\n    \"currency\": \"EUR\",    \n    \"merchantId\": 3,\n    \"merchantTransactionReference\": \"sbTT112431\",\n    \"merchantUserReference\": \"user@user.com\",\n    \"productId\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://3pi-api.phygital-pay.com/v1/merchant/codes",
+					"protocol": "https",
+					"host": [
+						"3pi-api",
+						"phygital-pay",
+						"com"
+					],
+					"path": [
+						"v1",
+						"merchant",
+						"codes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Healthcheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://3pi-api.phygital-pay.com/v1/merchant/healthcheck",
+					"protocol": "https",
+					"host": [
+						"3pi-api",
+						"phygital-pay",
+						"com"
+					],
+					"path": [
+						"v1",
+						"merchant",
+						"healthcheck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Code",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Shared-Key",
+						"value": "1111111111111111111111111111111111111111111111111111111111111111",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://3pi-api.phygital-pay.com/v1/merchant/codes/2",
+					"protocol": "https",
+					"host": [
+						"3pi-api",
+						"phygital-pay",
+						"com"
+					],
+					"path": [
+						"v1",
+						"merchant",
+						"codes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
